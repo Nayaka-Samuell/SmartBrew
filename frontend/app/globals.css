@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom base styles ───────────────────────────────────────────────────── */
+body {
+  @apply bg-cream text-coffee-900 antialiased;
+}
+
+/* ── Utility: kartu dengan bayangan kopi ────────────────────────────────── */
+@layer components {
+  .coffee-card {
+    @apply bg-white rounded-2xl shadow-md border border-coffee-200
+           hover:shadow-lg hover:border-coffee-400 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-coffee-700 text-cream font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-coffee-900 active:scale-95 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply border border-coffee-600 text-coffee-700 font-semibold px-5 py-2.5
+           rounded-xl hover:bg-coffee-100 active:scale-95 transition-all duration-200;
+  }
+}
+
